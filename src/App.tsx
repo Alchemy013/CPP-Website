@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import {
   Main,
   Timeline,
@@ -31,6 +32,7 @@ function App() {
         mode === "dark" ? "dark-mode" : "light-mode"
       }`}
     >
+      <SpeedInsights />
       <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
       <FadeIn transitionDuration={700}>
         <Main />
